@@ -26,6 +26,20 @@ categories:
         icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/proxmox.webp"
         url: "http://proxmox.lan:8006"
 ```
+### Authelia specif feature
+If you put the dashboard behind authelia with groups configured,
+you can forward the header `Remote-Groups` from authelia to sakuradash.
+This unlocks functionality to show certain categories only to users who belong to the configured group.
+Unlock this functionality by adding `view_group` to a categories entry like so:
+```yaml
+...
+categories:
+  - name: ...
+    view_group: "jellyfin_users"
+    items:
+...
+```
+This makes this particular category only visible to users in the `jellyfin_users` group.
 
 ## Build
 Clone the git repo and run the following command:  
