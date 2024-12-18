@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Config.Title}}</title>
+    <link rel="stylesheet" href="/static/w3.css">
+    <link rel="shortcut icon" href="/static/favicon.png" type="image/png">
+</head>
+<body
+        style="
+        background-image: url(/static/background.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed"
+>
+{{$index := 0}}
+
+{{range .Config.Categories}}
+{{if isVisible $.UserGroups .ViewGroup}}
+<div class="w3-container">
+    <div class="w3-panel" style="border-radius: 25px; background-color: rgba(0, 0, 0, 0.8)">
+        <div class="w3-bar">
+            <div class="w3-left"><h3 class="w3-text-white" style="margin-left: 24px; margin-top: 18px">{{.Name}}</h3></div>
+            <div class="w3-right">
+                <h3 id="button-{{$index}}" class="w3-text-white" onclick="toggle('{{$index}}')">&#8650;</h3>
+            </div>
+        </div>
+        <div class="w3-row-padding w3-padding w3-show" id="row-{{$index}}">
+            {{range .Items}}
+            <div class="w3-col m3" style="margin-bottom: 16px">
+                <a href="{{.URL}}" style="text-decoration: none" target="_blank">
+                    <div class="w3-padding w3-dark-gray w3-card" style="border-radius: 10px">
+                        <img src="{{.Icon}}" alt="logo" style="height: 75px">
+                        <span style="padding-left: 8px">{{.Name}}</span>
+                    </div>
+                </a>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}
+{{$index = add $index 1}}
+{{end}}
+<script lang="text/javascript">
+    function toggle(id) {
+        const toggle = document.getElementById("button-" + id);
+        const item = document.getElementById("row-" + id);
+        const open = item.classList.contains("w3-show");
+
+        if (open) {
+            item.classList.remove("w3-show");
+            item.classList.add("w3-hide");
+            toggle.innerHTML = "&#8647;"
+        } else {
+            item.classList.remove("w3-hide");
+            item.classList.add("w3-show");
+            toggle.innerHTML = "&#8650;"
+        }
+    }
+</script>
+</body>
+</html>
