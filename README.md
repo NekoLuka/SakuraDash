@@ -36,6 +36,7 @@ Run the following command after you build the image:
 `docker run -p 8080:8080 -v ./config.yaml:/config.yaml sakuradash`
 
 ## Screenshot
+<img width="1469" alt="image" src="https://github.com/user-attachments/assets/453caf90-ca54-4fad-896e-d002c0b66460" />
 
 
 ## Mentions
