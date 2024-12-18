@@ -43,11 +43,14 @@ This makes this particular category only visible to users in the `jellyfin_users
 
 ## Build
 Clone the git repo and run the following command:  
-`docker build -t sakuradash .`
+`docker build -t nekoluka/sakuradash .`
+
+## Pull
+`docker pull nekoluka/sakuradash`
 
 ## Running
 Run the following command after you build the image:  
-`docker run -p 8080:8080 -v ./config.yaml:/config.yaml sakuradash`
+`docker run -p 8080:8080 -v ./config.yaml:/config.yaml nekoluka/sakuradash`
 
 ## Screenshot
 <img width="1469" alt="image" src="https://github.com/user-attachments/assets/453caf90-ca54-4fad-896e-d002c0b66460" />
