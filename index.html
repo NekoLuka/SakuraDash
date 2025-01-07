@@ -35,11 +35,11 @@
                         </div>
                         <div class="w3-col s8 w3-display-container" style="height: 75px">
                             <span class="w3-display-left">{{.Name}}</span>
+                            {{if .Uptime}}
                             <span class="w3-display-bottomleft">
-                                {{if .Uptime}}
                                 <img src="{{$.Config.GatusUrl}}/api/v1/endpoints/{{.Uptime}}/uptimes/24h/badge.svg" alt="uptime">
-                                {{end}}
                             </span>
+                            {{end}}
                         </div>
                     </div>
                 </a>
