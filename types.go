@@ -3,6 +3,7 @@ package main
 type Config struct {
 	Title      string           `yaml:"title"`
 	CacheIcons bool             `yaml:"cache_icons"`
+	GatusUrl   string           `yaml:"gatus_url"`
 	Categories []CategoryConfig `yaml:"categories"`
 }
 
@@ -13,7 +14,8 @@ type CategoryConfig struct {
 }
 
 type ItemConfig struct {
-	Name string `yaml:"name"`
-	Icon string `yaml:"icon"`
-	URL  string `yaml:"url"`
+	Name   string `yaml:"name"`
+	Icon   string `yaml:"icon"`
+	URL    string `yaml:"url"`
+	Uptime string `yaml:"uptime"`
 }

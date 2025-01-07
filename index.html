@@ -29,9 +29,18 @@
             {{range .Items}}
             <div class="w3-col m3" style="margin-bottom: 16px">
                 <a href="{{.URL}}" style="text-decoration: none" target="_blank">
-                    <div class="w3-padding w3-dark-gray w3-card" style="border-radius: 10px">
-                        <img src="{{.Icon}}" alt="logo" style="height: 75px">
-                        <span style="padding-left: 8px">{{.Name}}</span>
+                    <div class="w3-padding w3-dark-gray w3-card w3-row" style="border-radius: 10px">
+                        <div class="w3-col s4">
+                            <img src="{{.Icon}}" alt="logo" style="height: 75px">
+                        </div>
+                        <div class="w3-col s8 w3-display-container" style="height: 75px">
+                            <span style="padding-left: 8px" class="w3-display-left">
+                                {{.Name}}
+                                {{if .Uptime}}
+                                <img src="{{$.Config.GatusUrl}}/api/v1/endpoints/{{.Uptime}}/uptimes/24h/badge.svg" alt="uptime">
+                                {{end}}
+                            </span>
+                        </div>
                     </div>
                 </a>
             </div>
