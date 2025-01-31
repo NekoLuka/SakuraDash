@@ -9,8 +9,8 @@ This is to be replaced with commissioned art sometime in the future.
 - Make the config file location configurable
 - Implement icon caching
 - Implement logging
-- Publish a docker image
 - Create overrideable static files for customisation
+- Create calm mode with smaller text and colored dot to decrease visual input
 
 ## Config
 Adapt the following example to your own needs
