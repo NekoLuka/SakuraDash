@@ -5,6 +5,7 @@ type Config struct {
 	CacheIcons bool             `yaml:"cache_icons"`
 	GatusUrl   string           `yaml:"gatus_url"`
 	Categories []CategoryConfig `yaml:"categories"`
+	Links      []ItemConfig     `yaml:"links"`
 }
 
 type CategoryConfig struct {
