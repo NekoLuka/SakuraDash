@@ -5,6 +5,7 @@
     <title>{{.Config.Title}}</title>
     <link rel="stylesheet" href="/static/w3.css">
     <link rel="shortcut icon" href="/static/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body
         style="
@@ -18,13 +19,13 @@
 <div class="w3-panel">
     <div class="w3-row-padding">
         {{range .Config.Links}}
-        <div class="w3-col m1">
+        <div class="w3-col s6 m1" style="margin-bottom: 16px">
             <a href="{{.URL}}" style="text-decoration: none" target="_blank">
                 <div class="w3-padding w3-row w3-card w3-round-xxlarge" style="background-color: rgba(0, 0, 0, 0.8)">
-                    <div class="w3-col m4">
+                    <div class="w3-col s4">
                         <img src="{{.Icon}}" alt="logo" style="height: 15px">
                     </div>
-                    <div class="w3-col m8" style="height: 15px">
+                    <div class="w3-col s8" style="height: 15px">
                         <span class="w3-text-white">{{.Name}}</span>
                     </div>
                 </div>
@@ -46,7 +47,7 @@
         </div>
         <div class="w3-row-padding w3-padding w3-show" id="row-{{$index}}">
             {{range .Items}}
-            <div class="w3-col m3" style="margin-bottom: 16px">
+            <div class="w3-col s12 m3 l2" style="margin-bottom: 16px">
                 <a href="{{.URL}}" style="text-decoration: none" target="_blank">
                     <div class="w3-padding w3-dark-gray w3-card w3-row" style="border-radius: 10px">
                         <div class="w3-col s4">
