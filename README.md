@@ -1,3 +1,6 @@
+# Notice: This project has been migrated to Codeberg
+[Link to new repository](https://codeberg.org/nekoluka/SakuraDash)
+
 # SakuraDash
 A simple dashboard that you configure with a simple yaml file, and pulls icons from the selfhst/icons project.
 
